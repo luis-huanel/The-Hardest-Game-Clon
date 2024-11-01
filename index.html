@@ -9,15 +9,18 @@
     <style>
       /* Estilos personalizados */
       body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url("https://portales.inacap.cl/Assets/sedes/punta-arenas/foto-sede.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: auto;
-        width: 100%;
+          font-family: Arial, sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-image: url("https://portales.inacap.cl/Assets/sedes/punta-arenas/foto-sede.jpg");
+          background-repeat: no-repeat;
+          background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+          background-position: center; /* Centra la imagen en el fondo */
+          height: 100vh; /* Cambia a 100vh para cubrir toda la altura de la ventana */
+          width: 100%; /* Asegura que el ancho sea del 100% */
+          margin: 0; /* Elimina márgenes para evitar espacios no deseados */
+          overflow: hidden; /* Evita el desbordamiento si es necesario */
       }
       h1 {
         color: #ffffff;
@@ -129,8 +132,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1000px";
+        canvas.style.height = "800px";
       }
 
       loadingBar.style.display = "block";
