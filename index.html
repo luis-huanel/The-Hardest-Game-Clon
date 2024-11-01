@@ -6,8 +6,41 @@
     <title>Unity WebGL Player | Inacap 2D</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      /* Estilos personalizados */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url("https://portales.inacap.cl/Assets/sedes/punta-arenas/foto-sede.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        width: auto;
+      }
+      h1 {
+        color: #333;
+        font-size: 2.5em;
+        margin-top: 20px;
+        text-align: center;
+      }
+      p {
+        color: #555;
+        font-size: 1.2em;
+        text-align: center;
+        max-width: 800px;
+        margin: 10px 20px;
+      }
+      /* Oculta el botón de pantalla completa */
+      #unity-fullscreen-button {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <h1>Bienvenidos al Juego The Hardest Game Inacap - 2024</h1>
+    <p>Proyecto Unity 2D - INACAP 2024</p>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -107,9 +140,10 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-                fullscreenButton.onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
+                  // Botón de pantalla completa desactivado
+                  // fullscreenButton.onclick = () => {
+                  //   unityInstance.SetFullscreen(1);
+                  // };
               }).catch((message) => {
                 alert(message);
               });
